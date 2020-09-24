@@ -104,6 +104,7 @@ public class UserController {
 	}
 	@PutMapping("/test/update")
 	public ResponseEntity<Tests> updateTest(@RequestBody Tests newTestData){
+		System.out.println("controller "+newTestData);
 		return new ResponseEntity<Tests>(userService.updateTest(newTestData),HttpStatus.OK);
 	}
 	@GetMapping("/test/getTest/{testId}")//done

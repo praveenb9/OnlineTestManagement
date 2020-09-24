@@ -351,6 +351,7 @@ public class UserServiceImpl implements IUserService {
 	@Override
 	public Tests updateTest(Tests newTestData) {
 		// TODO Auto-generated method stub
+		System.out.println("controller "+newTestData);
 		Tests t=rt.getForObject("http://localhost:8020/test/id/"+newTestData.getTestId(), Tests.class);
 		rt.put("http://localhost:8020/test/update", Tests.class);
 		return t;
