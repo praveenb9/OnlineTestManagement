@@ -94,11 +94,11 @@ public class UserController {
 	
 	
 	
-	@PostMapping("/test/add")
+	@PostMapping("/test/add")//done
 	public ResponseEntity<Tests> addTest(@RequestBody Tests test){
 		return new ResponseEntity<Tests>(userService.addTest(test),HttpStatus.OK);
 	}
-	@DeleteMapping("/test/delete/id/{testId}")
+	@DeleteMapping("/test/delete/id/{testId}")//done
 	public ResponseEntity<Tests> deleteTest(@PathVariable long testId){
 		return new ResponseEntity<Tests>(userService.deleteTest(testId),HttpStatus.OK);
 	}
@@ -106,19 +106,19 @@ public class UserController {
 	public ResponseEntity<Tests> updateTest(@RequestBody Tests newTestData){
 		return new ResponseEntity<Tests>(userService.updateTest(newTestData),HttpStatus.OK);
 	}
-	@GetMapping("/test/getTest/{testId}")
+	@GetMapping("/test/getTest/{testId}")//done
 	public ResponseEntity<Tests> getTest(@PathVariable long testId){
 		return new ResponseEntity<Tests>(userService.getTest(testId),HttpStatus.OK);
 	}
-	@GetMapping("/test/fetchall")
+	@GetMapping("/test/fetchall")//done
 	public ResponseEntity<List<Tests>> fetchAllTests(){
 		return new ResponseEntity<List<Tests>>(userService.fetchAllTests(),HttpStatus.OK);
 	}
-	@GetMapping("/test/get/question/{testId}")
+	@GetMapping("/test/get/question/{testId}")//should be done with question module
 	public ResponseEntity<List<Question>> getTestQuestions(@PathVariable long testId){
 		return new ResponseEntity<List<Question>>(userService.getTestQuestion(testId),HttpStatus.OK);
 	}
-	@GetMapping("/test/calculate/marks/{testId}")
+	@GetMapping("/test/calculate/marks/{testId}")//should be done with question module
 	public ResponseEntity<Double> calculateTotalMarks(@PathVariable long testId){
 		return new ResponseEntity<Double>(userService.calculateTotalMarks(testId),HttpStatus.OK);
 	}

@@ -367,7 +367,7 @@ public class UserServiceImpl implements IUserService {
 	public Tests deleteTest(long testId) {
 		// TODO Auto-generated method stub
 		Tests t=rt.getForObject("http://localhost:8020/test/id/"+testId, Tests.class);
-		 rt.delete("http:/localhost:8020/test/delete/id/"+testId,testId);
+		 rt.delete("http://localhost:8020/test/delete/id/"+testId,testId);
 		 return t;
 	}
 
