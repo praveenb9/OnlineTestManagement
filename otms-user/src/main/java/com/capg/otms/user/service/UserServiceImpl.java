@@ -1,14 +1,20 @@
+/********************************************************************************
+ -Author                : Tutha Sai Charan
+ -Created/Modified Date : 23/09/2020
+ -Description           : Implementation Class of User serivce Interface for 
+ 						  Performing Services Related To User
+*********************************************************************************/
+
+
 package com.capg.otms.user.service;
 
 import java.util.Arrays;
 import java.util.List;
 
-import org.hibernate.TypeMismatchException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.capg.otms.user.exception.InvalidInputException;
@@ -28,6 +34,14 @@ public class UserServiceImpl implements IUserService {
 	@Autowired
 	IUserRepo userRepo;
 	
+	/*************************************************************************
+	 -MethodName            : addUser
+	 -Input Parameters      : User user
+	 -Return Type           : User
+	 -Throws				: UserAlreadyExistsException,InvalidInputException
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public User addUser(User user) {
 		// TODO Auto-generated method stub
@@ -50,14 +64,34 @@ public class UserServiceImpl implements IUserService {
 		return userRepo.save(user);
 	}
 
+	/*************************************************************************
+	 -MethodName            : deleteUser
+	 -Input Parameters      : long userId
+	 -Return Type           : User
+	 -Throws				: UserNotFoundException
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public User deleteUser(long userId) {
 		// TODO Auto-generated method stub
+		
 		User deleteUser = userRepo.getOne(userId);
-		userRepo.deleteById(userId);
+		if(deleteUser!=null) {
+		userRepo.deleteById(userId);}
+		else 
+			throw new UserNotFoundException("no user found "+userId+" with this id");
 		return deleteUser;
 	}
 
+	/*************************************************************************
+	 -MethodName            : updateUser
+	 -Input Parameters      : User user
+	 -Return Type           : User
+	 -Throws				: UserNotFoundException
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public User updateUser(User user) {
 		// TODO Auto-generated method stub
@@ -76,6 +110,15 @@ public class UserServiceImpl implements IUserService {
 		 }
 	}
 
+	/*************************************************************************
+	 -MethodName            : getUser
+	 -Input Parameters      : long userId
+	 -Return Type           : User
+	 -Throws				: UserNotFoundException
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
+
 	@Override
 	public User getUser(long userId) {
 		// TODO Auto-generated method stub
@@ -85,6 +128,15 @@ public class UserServiceImpl implements IUserService {
 		}
 		return userRepo.getOne(userId);
 	}
+	
+	/*************************************************************************
+	 -MethodName            : validateUserName
+	 -Input Parameters      : String userName
+	 -Return Type           : boolean
+	 -Throws				: InvalidInputException
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public boolean validateUserName(String userName) {
 		// TODO Auto-generated method stub
@@ -97,6 +149,14 @@ public class UserServiceImpl implements IUserService {
 		
 	}
 
+	/*************************************************************************
+	 -MethodName            : validateUserPassword
+	 -Input Parameters      : String userPassword
+	 -Return Type           : boolean
+	 -Throws				: InvalidInputException
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public boolean validateUserPassword(String userPassword) {
 		// TODO Auto-generated method stub
@@ -108,12 +168,28 @@ public class UserServiceImpl implements IUserService {
 			throw new InvalidInputException("Password should contain:- [uppercase ,lowercase ,numeric ,any of the characters ,should contain atleast 8 characters]");
 	}
 	
+	/*************************************************************************
+	 -MethodName            : getAllUsers
+	 -Input Parameters      : -
+	 -Return Type           : List of users
+	 -Throws				: -
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public List<User> getAllUsers() {
 		// TODO Auto-generated method stub
 		return userRepo.findAll();
 	}
 
+	/*************************************************************************
+	 -MethodName            : getByUserName
+	 -Input Parameters      : String userName
+	 -Return Type           : User
+	 -Throws				: -
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public User getByUserName(String userName) {
 		// TODO Auto-generated method stub
@@ -122,6 +198,14 @@ public class UserServiceImpl implements IUserService {
 		
 	}
 	
+	/*************************************************************************
+	 -MethodName            : assingTest
+	 -Input Parameters      : long userId,long testId
+	 -Return Type           : boolean
+	 -Throws				: ResponseStatusException
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public boolean assingTest(long userId, long testId) {
 		// TODO Auto-generated method stub
@@ -140,6 +224,13 @@ public class UserServiceImpl implements IUserService {
 		
 	}
 
+	/*************************************************************************
+	 -MethodName            : addQuestion
+	 -Input Parameters      : Question question
+	 -Return Type           : Question
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public Question addQuestion(Question question) {
 		// TODO Auto-generated method stub
@@ -147,6 +238,13 @@ public class UserServiceImpl implements IUserService {
 		return q;
 	}
 
+	/*************************************************************************
+	 -MethodName            : updateQuestion
+	 -Input Parameters      : Question question
+	 -Return Type           : Question
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public Question updateQuestion(Question question) {
 		// TODO Auto-generated method stub
@@ -156,6 +254,13 @@ public class UserServiceImpl implements IUserService {
 		return q1;
 	}
 
+	/*************************************************************************
+	 -MethodName            : deleteQuestion
+	 -Input Parameters      : long questionId
+	 -Return Type           : Question
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public Question deleteQuestion(long questionId) {
 		// TODO Auto-generated method stub
@@ -164,6 +269,13 @@ public class UserServiceImpl implements IUserService {
 		return q;
 	}
 
+	/*************************************************************************
+	 -MethodName            : getQuestion
+	 -Input Parameters      : long questionId
+	 -Return Type           : Question
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public Question getQuestion(long questionId) {
 		// TODO Auto-generated method stub
@@ -172,6 +284,13 @@ public class UserServiceImpl implements IUserService {
 		return q;
 	}
 
+	/*************************************************************************
+	 -MethodName            : getAllQuestions
+	 -Input Parameters      : -
+	 -Return Type           : list of questions
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public List<Question> getAllQuestions() {
 		// TODO Auto-generated method stub
@@ -179,6 +298,13 @@ public class UserServiceImpl implements IUserService {
 		return Arrays.asList(questionList);
 	}
 
+	/*************************************************************************
+	 -MethodName            : addTest
+	 -Input Parameters      : Tests test
+	 -Return Type           : Tests
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public Tests addTest(Tests test) {
 		// TODO Auto-generated method stub
@@ -186,6 +312,13 @@ public class UserServiceImpl implements IUserService {
 		return t;
 	}
 
+	/*************************************************************************
+	 -MethodName            : getTest
+	 -Input Parameters      : long testId
+	 -Return Type           : Tests
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public Tests getTest(long testId) {
 		// TODO Auto-generated method stub
@@ -193,6 +326,13 @@ public class UserServiceImpl implements IUserService {
 		return t;
 	}
 
+	/*************************************************************************
+	 -MethodName            : fetchAllTests
+	 -Input Parameters      : -
+	 -Return Type           : list of tests
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public List<Tests> fetchAllTests() {
 		// TODO Auto-generated method stub
@@ -201,6 +341,13 @@ public class UserServiceImpl implements IUserService {
 		
 	}
 
+	/*************************************************************************
+	 -MethodName            : updateTest
+	 -Input Parameters      : Tests newTestData
+	 -Return Type           : Tests
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public Tests updateTest(Tests newTestData) {
 		// TODO Auto-generated method stub
@@ -209,6 +356,13 @@ public class UserServiceImpl implements IUserService {
 		return t;
 	}
 
+	/*************************************************************************
+	 -MethodName            : deleteTest
+	 -Input Parameters      : long testId
+	 -Return Type           : Tests
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public Tests deleteTest(long testId) {
 		// TODO Auto-generated method stub
@@ -217,6 +371,13 @@ public class UserServiceImpl implements IUserService {
 		 return t;
 	}
 
+	/*************************************************************************
+	 -MethodName            : getTestQuestion
+	 -Input Parameters      : long testId
+	 -Return Type           : list of question
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public List<Question> getTestQuestion(long testId) {
 		// TODO Auto-generated method stub
@@ -224,6 +385,13 @@ public class UserServiceImpl implements IUserService {
 		return Arrays.asList(q);
 	}
 
+	/*************************************************************************
+	 -MethodName            : calculateTotalMarks
+	 -Input Parameters      : long testId
+	 -Return Type           : double
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 	@Override
 	public double calculateTotalMarks(long testId) {
 		// TODO Auto-generated method stub
@@ -234,6 +402,13 @@ public class UserServiceImpl implements IUserService {
 		
 		return testMarks.getTestMarksScored();
 	}
+	/*************************************************************************
+	 -MethodName            : assingQuestion
+	 -Input Parameters      : long questionId,long testId
+	 -Return Type           : Tests
+	 -Author				: Tutha Sai Charan
+	 -Modified Date			: 23/09/2020
+	***************************************************************************/
 
 	@Override
 	public Tests assignQuestion(long testId, long questionId) {
