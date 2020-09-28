@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.capg.otms.user.exception.CanNotAssingTestException;
 import com.capg.otms.user.exception.InvalidInputException;
 import com.capg.otms.user.exception.InvalidPasswordException;
 import com.capg.otms.user.exception.UserAlreadyExistsException;
@@ -80,7 +81,7 @@ public class UserServiceImpl implements IUserService {
 		// TODO Auto-generated method stub
 		
 		User deleteUser = userRepo.getOne(userId);
-		if(deleteUser!=null) {
+		if(userRepo.existsById(userId)) {
 		userRepo.deleteById(userId);}
 		else 
 			throw new UserNotFoundException("no user found "+userId+" with this id");
@@ -222,7 +223,7 @@ public class UserServiceImpl implements IUserService {
 		}
 		else {
 		
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+			throw new CanNotAssingTestException("Admin can not write test please proceed with your work :)");
 		}
 		
 	}
