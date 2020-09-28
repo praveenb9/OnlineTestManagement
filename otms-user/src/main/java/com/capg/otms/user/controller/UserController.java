@@ -13,6 +13,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,10 +27,12 @@ import com.capg.otms.user.model.Question;
 
 import com.capg.otms.user.model.Tests;
 import com.capg.otms.user.model.User;
+import com.capg.otms.user.model.UserCredentials;
 import com.capg.otms.user.service.IUserService;
 
 @RestController
 @RequestMapping("/user")
+@CrossOrigin
 public class UserController {
 
 	@Autowired
@@ -37,6 +40,8 @@ public class UserController {
 	
 	@PostMapping("/add")
 	public ResponseEntity<User> addUser(@RequestBody User user) {
+		
+		System.out.println(user);
 		return new ResponseEntity<User>(userService.addUser(user), HttpStatus.OK);
 	}
 	@PutMapping("/update")
@@ -65,7 +70,11 @@ public class UserController {
 		return new ResponseEntity<Boolean>(result,HttpStatus.OK);
 	}
 	
-	
+	@PostMapping("/validate")
+	public User validateUser(@RequestBody UserCredentials credentials)
+	{
+		return userService.validateUser(credentials);
+	}
 	
 	
 	@PostMapping("/add/question")//done
@@ -116,11 +125,29 @@ public class UserController {
 		return new ResponseEntity<List<Tests>>(userService.fetchAllTests(),HttpStatus.OK);
 	}
 	@GetMapping("/test/get/question/{testId}")//should be done with question module
-	public ResponseEntity<List<Question>> getTestQuestions(@PathVariable long testId){
-		return new ResponseEntity<List<Question>>(userService.getTestQuestion(testId),HttpStatus.OK);
+	public List<Question> getTestQuestions(@PathVariable long testId){
+		
+		System.out.println("=========== =   testID"+testId);
+		
+		return userService.getTestQuestion(testId);
 	}
 	@GetMapping("/test/calculate/marks/{testId}")//should be done with question module
 	public ResponseEntity<Double> calculateTotalMarks(@PathVariable long testId){
 		return new ResponseEntity<Double>(userService.calculateTotalMarks(testId),HttpStatus.OK);
 	}
+	
+	@PutMapping("/test/add/question/{testId}/{questionId}")
+	public Tests addQuestionToTest(@PathVariable long testId, @PathVariable long questionId)
+	{
+		System.out.println("=========== =   testID"+testId);
+		System.out.println("=========== =   testID"+questionId);
+
+		return userService.assignQuestion(testId, questionId);
+	}
+	
+//	@GetMapping("/test/questions/{testId}")
+//	public List<Question> getTestQuestions(@PathVariable long testId)
+//	{
+//		return userService.getTestQuestion(testId);
+//	}
 }

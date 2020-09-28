@@ -6,6 +6,7 @@ import com.capg.otms.user.model.Question;
 
 import com.capg.otms.user.model.Tests;
 import com.capg.otms.user.model.User;
+import com.capg.otms.user.model.UserCredentials;
 
 
 public interface IUserService {
@@ -34,5 +35,6 @@ public interface IUserService {
 	Question deleteQuestion(long questionId);
 	Question getQuestion(long questionId);
 	List<Question> getAllQuestions();
+	User validateUser(UserCredentials credentials);
 	
 }

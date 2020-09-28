@@ -10,6 +10,7 @@ package com.capg.otms.user.service;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,12 +19,14 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.capg.otms.user.exception.InvalidInputException;
+import com.capg.otms.user.exception.InvalidPasswordException;
 import com.capg.otms.user.exception.UserAlreadyExistsException;
 import com.capg.otms.user.exception.UserNotFoundException;
 import com.capg.otms.user.model.Question;
 
 import com.capg.otms.user.model.Tests;
 import com.capg.otms.user.model.User;
+import com.capg.otms.user.model.UserCredentials;
 import com.capg.otms.user.repo.IUserRepo;
 @Service
 public class UserServiceImpl implements IUserService {
@@ -352,9 +355,9 @@ public class UserServiceImpl implements IUserService {
 	public Tests updateTest(Tests newTestData) {
 		// TODO Auto-generated method stub
 		System.out.println("controller "+newTestData);
-		Tests t=rt.getForObject("http://localhost:8020/test/id/"+newTestData.getTestId(), Tests.class);
-		rt.put("http://localhost:8020/test/update", Tests.class);
-		return t;
+		//Tests t=rt.getForObject("http://localhost:8020/test/id/"+newTestData.getTestId(), Tests.class);
+		rt.put("http://localhost:8020/test/update", newTestData);
+		return newTestData;
 	}
 
 	/*************************************************************************
@@ -383,6 +386,7 @@ public class UserServiceImpl implements IUserService {
 	public List<Question> getTestQuestion(long testId) {
 		// TODO Auto-generated method stub
 		Question[] q= rt.getForObject("http://localhost:8020/test/questions/"+testId, Question[].class);
+		System.out.println(Arrays.asList(q));
 		return Arrays.asList(q);
 	}
 
@@ -413,9 +417,30 @@ public class UserServiceImpl implements IUserService {
 
 	@Override
 	public Tests assignQuestion(long testId, long questionId) {
-		// TODO Auto-generated method stub
 		
-		return null;
+		Tests test=rt.getForObject("http://localhost:8020/test/id/"+testId,Tests.class);
+		test.getTestQuestions().add(questionId);
+//		Set<Long> questions=test.getTestQuestions();
+//		questions.add(questionId);
+		return test;
+	}
+
+	@Override
+	public User validateUser(UserCredentials credentials) {
+		
+		if(!userRepo.existsById(credentials.getUserId()))
+		{
+			throw new UserNotFoundException("User Not Found");
+		}
+		User user=userRepo.getOne(credentials.getUserId());
+		if(user.getUserPassword().equals(credentials.getPassword()))
+		{
+			return user;
+		}
+		else
+		{
+			throw new InvalidPasswordException("Invalid Password");
+		}
 	}
 
 	

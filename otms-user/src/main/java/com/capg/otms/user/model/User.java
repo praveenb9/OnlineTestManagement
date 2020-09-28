@@ -93,6 +93,11 @@ public class User {
 			return false;
 		return true;
 	}
-	
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", userName=" + userName + ", userPassword=" + userPassword + ", userTest="
+				+ userTest + ", adminOrNot=" + adminOrNot + "]";
+	}
+
 
 }
