@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.capg.otms.user.exception.CanNotAssingTestException;
 import com.capg.otms.user.exception.InvalidInputException;
 import com.capg.otms.user.exception.UserAlreadyExistsException;
 import com.capg.otms.user.exception.UserNotFoundException;
@@ -27,6 +29,11 @@ public class UserErrorController {
 	@ExceptionHandler(UserNotFoundException.class)
 	@ResponseStatus(value = HttpStatus.NOT_FOUND,reason = "User Not found!")
 	public void UserNotFoundException() {
+		
+	}
+	@ExceptionHandler(CanNotAssingTestException.class)
+	@ResponseStatus(value = HttpStatus.FORBIDDEN,reason = "Admin can not write test!")
+	public void CanNotAssingTestException() {
 		
 	}
 	
