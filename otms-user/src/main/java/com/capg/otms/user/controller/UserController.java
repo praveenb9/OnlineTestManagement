@@ -32,7 +32,7 @@ import com.capg.otms.user.service.IUserService;
 
 @RestController
 @RequestMapping("/user")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
 
 	@Autowired
