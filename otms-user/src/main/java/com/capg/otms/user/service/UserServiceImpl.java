@@ -428,11 +428,13 @@ public class UserServiceImpl implements IUserService {
 	@Override
 	public User validateUser(UserCredentials credentials) {
 		
-		if(!userRepo.existsById(credentials.getUserId()))
+		User user=userRepo.getByUserName(credentials.getUserName());
+		
+		if(!userRepo.existsById(user.getUserId()))
 		{
 			throw new UserNotFoundException("User Not Found");
 		}
-		User user=userRepo.getOne(credentials.getUserId());
+		//User user=userRepo.getOne(credentials.getUserId());
 		if(user.getUserPassword().equals(credentials.getPassword()))
 		{
 			return user;

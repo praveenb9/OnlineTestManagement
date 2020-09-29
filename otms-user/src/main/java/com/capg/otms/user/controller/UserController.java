@@ -105,6 +105,7 @@ public class UserController {
 	
 	@PostMapping("/test/add")//done
 	public ResponseEntity<Tests> addTest(@RequestBody Tests test){
+		System.out.println("test "+test);
 		return new ResponseEntity<Tests>(userService.addTest(test),HttpStatus.OK);
 	}
 	@DeleteMapping("/test/delete/id/{testId}")//done

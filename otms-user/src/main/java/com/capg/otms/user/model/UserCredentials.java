@@ -2,25 +2,23 @@ package com.capg.otms.user.model;
 
 public class UserCredentials {
 
-	private long userId;
+	private String userName;
 	private String password;
 	public UserCredentials() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-	public UserCredentials(long userId, String password) {
+	public UserCredentials(String userName, String password) {
 		super();
-		this.userId = userId;
+		this.userName = userName;
 		this.password = password;
 	}
-	
-	
-	public long getUserId() {
-		return userId;
+
+	public String getUserName() {
+		return userName;
 	}
-	public void setUserId(long userId) {
-		this.userId = userId;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	public String getPassword() {
 		return password;
@@ -28,11 +26,13 @@ public class UserCredentials {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "UserCredentials [userId=" + userId + ", password=" + password +  "]";
+		return "UserCredentials [userName=" + userName + ", password=" + password + "]";
 	}
+	
+	
 	
 	
 }
