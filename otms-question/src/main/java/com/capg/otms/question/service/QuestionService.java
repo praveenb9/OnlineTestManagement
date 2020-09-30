@@ -103,10 +103,10 @@ public class QuestionService implements IQuestionService {
 
 	@Override
 	public List<Question> getAllQuestions() {
-		if(questionRepo.findAll().size()==0)
-		{
-			throw new QuestionDoesNotExistException("Question List is Empty");
-		}
+//		if(questionRepo.findAll().size()==0)
+//		{
+//			throw new QuestionDoesNotExistException("Question List is Empty");
+//		}
 		return questionRepo.findAll();
 	}
 
