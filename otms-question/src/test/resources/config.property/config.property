@@ -1,0 +1,8 @@
+browser = chrome
+url = http://localhost:4200/login
+
+#login credentilas
+username = karthik
+password = Praveen@99
+
+#user details

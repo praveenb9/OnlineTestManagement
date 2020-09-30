@@ -1,0 +1,100 @@
+2020-09-29 22:29:34,831 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-29 22:29:41,144 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-29 22:29:44,544 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-29 22:29:44,546 - com.capg.otms.baseclass.Library -INFO - browser launched
+2020-09-29 22:29:44,770 - com.capg.otms.baseclass.Library -INFO - Entered username and password
+2020-09-29 22:29:44,861 - com.capg.otms.baseclass.Library -INFO - login successful
+2020-09-29 22:29:45,984 - com.capg.otms.baseclass.Library -INFO - Exiting the application and closing the browser
+2020-09-29 22:29:45,986 - com.capg.otms.baseclass.Library -INFO - Browser closed
+2020-09-29 23:16:38,909 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-29 23:16:43,499 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-29 23:16:46,756 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-29 23:16:46,760 - com.capg.otms.baseclass.Library -INFO - browser launched
+2020-09-29 23:16:47,010 - com.capg.otms.baseclass.Library -INFO - Entered username and password
+2020-09-29 23:16:47,110 - com.capg.otms.baseclass.Library -INFO - login successful
+2020-09-29 23:21:23,136 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-29 23:21:28,298 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-29 23:21:31,847 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-29 23:21:31,847 - com.capg.otms.baseclass.Library -INFO - browser launched
+2020-09-29 23:21:32,166 - com.capg.otms.baseclass.Library -INFO - Entered username and password
+2020-09-29 23:21:32,326 - com.capg.otms.baseclass.Library -INFO - login successful
+2020-09-29 23:23:59,017 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-29 23:24:03,742 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-29 23:24:07,204 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-29 23:24:07,208 - com.capg.otms.baseclass.Library -INFO - browser launched
+2020-09-29 23:24:07,513 - com.capg.otms.baseclass.Library -INFO - Entered username and password
+2020-09-29 23:24:07,622 - com.capg.otms.baseclass.Library -INFO - login successful
+2020-09-30 10:55:59,959 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-30 10:56:04,271 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-30 10:56:07,388 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-30 10:56:07,388 - com.capg.otms.baseclass.Library -INFO - browser launched
+2020-09-30 10:56:07,575 - com.capg.otms.baseclass.Library -INFO - Entered username and password
+2020-09-30 10:56:07,667 - com.capg.otms.baseclass.Library -INFO - login successful
+2020-09-30 11:13:37,385 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-30 11:13:41,299 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-30 11:13:44,485 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-30 11:13:44,486 - com.capg.otms.baseclass.Library -INFO - Browser Launched
+2020-09-30 11:13:44,736 - com.capg.otms.baseclass.Library -INFO - Entered User Details
+2020-09-30 11:13:44,791 - com.capg.otms.baseclass.Library -INFO - Log In Successfull
+2020-09-30 11:20:39,763 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-30 11:20:43,941 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-30 11:20:46,946 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-30 11:20:46,946 - com.capg.otms.baseclass.Library -INFO - Browser Launched
+2020-09-30 11:20:47,118 - com.capg.otms.baseclass.Library -INFO - Entered User Details
+2020-09-30 11:20:47,198 - com.capg.otms.baseclass.Library -INFO - Log In Successfull
+2020-09-30 11:25:15,195 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-30 11:25:19,210 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-30 11:25:22,396 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-30 11:25:22,397 - com.capg.otms.baseclass.Library -INFO - Browser Launched
+2020-09-30 11:25:22,557 - com.capg.otms.baseclass.Library -INFO - Entered User Details
+2020-09-30 11:25:22,631 - com.capg.otms.baseclass.Library -INFO - Log In Successfull
+2020-09-30 11:29:25,932 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-30 11:29:30,011 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-30 11:29:33,112 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-30 11:29:33,113 - com.capg.otms.baseclass.Library -INFO - Browser Launched
+2020-09-30 11:29:33,285 - com.capg.otms.baseclass.Library -INFO - Entered User Details
+2020-09-30 11:29:33,342 - com.capg.otms.baseclass.Library -INFO - Log In Successfull
+2020-09-30 11:33:26,227 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-30 11:33:30,175 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-30 11:33:33,302 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-30 11:33:33,303 - com.capg.otms.baseclass.Library -INFO - Browser Launched
+2020-09-30 11:33:33,471 - com.capg.otms.baseclass.Library -INFO - Entered User Details
+2020-09-30 11:33:33,574 - com.capg.otms.baseclass.Library -INFO - Log In Successfull
+2020-09-30 11:33:34,288 - com.capg.otms.baseclass.Library -INFO - Opened Question Operations
+2020-09-30 11:33:34,388 - com.capg.otms.baseclass.Library -INFO - Opened Add Question
+2020-09-30 11:33:34,830 - com.capg.otms.baseclass.Library -INFO - Taken Screenshot of Add Question
+2020-09-30 11:33:35,623 - com.capg.otms.baseclass.Library -INFO - Exiting the application and closing the browser
+2020-09-30 11:33:35,624 - com.capg.otms.baseclass.Library -INFO - Browser closed
+2020-09-30 11:50:15,624 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-30 11:50:19,458 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-30 11:50:22,650 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-30 11:50:22,650 - com.capg.otms.baseclass.Library -INFO - Browser Launched
+2020-09-30 11:50:22,812 - com.capg.otms.baseclass.Library -INFO - Entered User Details
+2020-09-30 11:50:22,870 - com.capg.otms.baseclass.Library -INFO - Log In Successfull
+2020-09-30 11:50:23,587 - com.capg.otms.baseclass.Library -INFO - Opened Question Operations
+2020-09-30 11:50:23,674 - com.capg.otms.baseclass.Library -INFO - Opened Add Question
+2020-09-30 11:50:24,008 - com.capg.otms.baseclass.Library -INFO - Taken Screenshot of Add Question
+2020-09-30 11:52:42,367 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-30 11:52:46,858 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-30 11:52:49,904 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-30 11:52:49,904 - com.capg.otms.baseclass.Library -INFO - Browser Launched
+2020-09-30 11:52:50,056 - com.capg.otms.baseclass.Library -INFO - Entered User Details
+2020-09-30 11:52:50,112 - com.capg.otms.baseclass.Library -INFO - Log In Successfull
+2020-09-30 11:52:50,910 - com.capg.otms.baseclass.Library -INFO - Opened Question Operations
+2020-09-30 11:52:50,987 - com.capg.otms.baseclass.Library -INFO - Opened Add Question
+2020-09-30 11:52:51,329 - com.capg.otms.baseclass.Library -INFO - Taken Screenshot of Add Question
+2020-09-30 11:57:56,780 - com.capg.otms.baseclass.Library -INFO - Starting with Browser Set Up
+2020-09-30 11:58:00,915 - com.capg.otms.baseclass.Library -INFO - Identified the browser as chrome. Launching the browser
+2020-09-30 11:58:04,044 - com.capg.otms.baseclass.Library -INFO - Launched the Orangr HRM Application
+2020-09-30 11:58:04,045 - com.capg.otms.baseclass.Library -INFO - Browser Launched
+2020-09-30 11:58:04,213 - com.capg.otms.baseclass.Library -INFO - Entered User Details
+2020-09-30 11:58:04,295 - com.capg.otms.baseclass.Library -INFO - Log In Successfull
+2020-09-30 11:58:05,199 - com.capg.otms.baseclass.Library -INFO - Opened Question Operations
+2020-09-30 11:58:05,280 - com.capg.otms.baseclass.Library -INFO - Opened Add Question
+2020-09-30 11:58:05,763 - com.capg.otms.baseclass.Library -INFO - Taken Screenshot of Add Question
+2020-09-30 11:58:06,021 - com.capg.otms.baseclass.Library -INFO - Clicked on Back In AddQuestion 
+2020-09-30 11:58:06,106 - com.capg.otms.baseclass.Library -INFO - Opened In Question List
+2020-09-30 11:58:06,433 - com.capg.otms.baseclass.Library -INFO - Taken Screenshot of  Question List
+2020-09-30 11:58:06,621 - com.capg.otms.baseclass.Library -INFO - Clicked on Back In Question List
+2020-09-30 11:58:07,322 - com.capg.otms.baseclass.Library -INFO - Exiting the application and closing the browser
+2020-09-30 11:58:07,322 - com.capg.otms.baseclass.Library -INFO - Browser closed

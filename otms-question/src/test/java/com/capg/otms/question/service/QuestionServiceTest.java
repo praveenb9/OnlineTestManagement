@@ -71,7 +71,7 @@ class QuestionServiceTest {
 	{
 		
 		List<Question>questionList=questionService.getAllQuestions();
-		assertEquals(7,questionList.size());
+		assertEquals(1,questionList.size());
 	}
 
 	@Test

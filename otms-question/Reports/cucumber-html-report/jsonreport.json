@@ -1,0 +1,177 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "To Test the Login Functionality of OTMS",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7338407300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "To Launch the Browser and navigate to the Url",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSLoginSteps.to_Launch_the_Browser_and_navigate_to_the_Url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 162985200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "To Enter Username and Password",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSLoginSteps.to_Enter_Username_and_Password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 82779200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "To Click the Submit button",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSLoginSteps.to_Click_the_Submit_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 557936900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "To Take The Screenshot and Title",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSLoginSteps.to_Take_The_Screenshot_and_Title()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-30T06:27:56.642Z",
+        "line": 9,
+        "name": "To Test The Question Functionality of OTMS",
+        "description": "",
+        "id": "to-test-the-otms-application;to-test-the-question-functionality-of-otms",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 341090300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "To Select the Question Operation",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSQuestionSteps.to_Select_the_Question_Operation()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 79918200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "To Open Add Question",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSQuestionSteps.to_Open_Add_Question()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 482003300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "To Take Screenshot and Title",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSQuestionSteps.to_Take_Screenshot_and_Title()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 258438900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "To Click on Back",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSQuestionSteps.to_Click_on_Back()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 86794600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "To Click on List Of Questions",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSQuestionSteps.to_Click_on_List_Of_Questions()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 322869300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "To Take QuestionList Screenshot",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSQuestionSteps.to_Take_QuestionList_Screenshot()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 187947800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "To Click on Back In QuestoinList",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSQuestionSteps.to_Click_on_Back_In_QuestoinList()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 699610400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "To close The browser",
+            "match": {
+              "location": "com.capg.otms.step_definition.OTMSQuestionSteps.to_close_The_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "To Test The OTMS Application",
+    "description": "",
+    "id": "to-test-the-otms-application",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/question.feature",
+    "tags": []
+  }
+]
