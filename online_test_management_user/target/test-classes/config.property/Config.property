@@ -1,0 +1,10 @@
+browser = chrome
+url = http://localhost:4200/login
+
+#login cridentials 
+username = Admin232
+password = A$@dh23gj
+
+#singup cridentials
+userName = Yasdus
+passwordTxt = Y$#eshjk123

@@ -1,0 +1,2 @@
+2020-09-29 16:37:57,860 [main] INFO com.base_class.Library - Starting with Browser Set Up
+2020-09-29 16:38:26,378 [main] INFO com.base_class.Library - Identified the browser as chrome. Launching the browser

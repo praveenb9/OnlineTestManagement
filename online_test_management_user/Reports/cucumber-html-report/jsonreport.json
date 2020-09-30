@@ -1,0 +1,191 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-09-30T04:12:46.061Z",
+        "line": 3,
+        "name": "To test the login function of otms",
+        "description": "",
+        "id": "to-test-the-otms-application;to-test-the-login-function-of-otms",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 14072810400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "To launch the browser and navigate to url",
+            "match": {
+              "location": "com.step_defination.OtmsLoginSteps.to_launch_the_browser_and_navigate_to_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 334915900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "To enter Username and Password",
+            "match": {
+              "location": "com.step_defination.OtmsLoginSteps.to_enter_Username_and_Password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 94736300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "To click the Submit button",
+            "match": {
+              "location": "com.step_defination.OtmsLoginSteps.to_click_the_Submit_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 555591600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "To click popup button",
+            "match": {
+              "location": "com.step_defination.OtmsLoginSteps.to_click_popup_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 515573100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "To take the ScreenShot and the title",
+            "match": {
+              "location": "com.step_defination.OtmsLoginSteps.to_take_the_ScreenShot_and_the_title()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 757257700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "To close the browser",
+            "match": {
+              "location": "com.step_defination.OtmsLoginSteps.to_close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-30T04:13:02.966Z",
+        "line": 11,
+        "name": "To Test the signup function of otms",
+        "description": "",
+        "id": "to-test-the-otms-application;to-test-the-signup-function-of-otms",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12176156700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "To open browser and navigate",
+            "match": {
+              "location": "com.step_defination.OtmsRegisterSteps.to_open_browser_and_navigate()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 117686100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "To click singup button",
+            "match": {
+              "location": "com.step_defination.OtmsRegisterSteps.to_click_singup_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 411314100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "To enter username and password and select type of user",
+            "match": {
+              "location": "com.step_defination.OtmsRegisterSteps.to_enter_username_and_password_and_select_type_of_user()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 80368700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "To click the register button",
+            "match": {
+              "location": "com.step_defination.OtmsRegisterSteps.to_click_the_register_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4088794000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The popup button clicking",
+            "match": {
+              "location": "com.step_defination.OtmsRegisterSteps.the_popup_button_clicking()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 514880700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "To take screenShot and get title",
+            "match": {
+              "location": "com.step_defination.OtmsRegisterSteps.to_take_screenShot_and_get_title()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2316097300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "To close the browser again",
+            "match": {
+              "location": "com.step_defination.OtmsRegisterSteps.to_close_the_browser_again()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "To test the otms application",
+    "description": "",
+    "id": "to-test-the-otms-application",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/TestCases.feature",
+    "tags": []
+  }
+]
