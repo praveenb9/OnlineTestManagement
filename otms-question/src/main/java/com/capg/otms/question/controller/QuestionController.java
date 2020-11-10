@@ -26,7 +26,7 @@ import com.capg.otms.question.service.QuestionService;
 public class QuestionController {
 
 	@Autowired
-	QuestionService questionService;
+	private QuestionService questionService;
 	
 	
 	@PostMapping("/add")
